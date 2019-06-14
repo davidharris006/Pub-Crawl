@@ -13,6 +13,8 @@ router.get("/", function (req, res) {
    res.render("index");
  
 });
+
+
 router.get("/survey", function (req, res) {
  
    res.render("survey");

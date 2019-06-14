@@ -128,10 +128,19 @@ body {
   left: 0;
   background: url("../images/pub.jpg");
   background-repeat: no-repeat;
-  
-  background-size: relative;
+  background-size: cover;
   /* object-fit: cover; */
 }
+
+#boxsurvey {
+  background-color: rgba(255, 113, 113, 0.24);
+  width: 70%;
+}
+
+h1 {
+  text-align: center; 
+}
+
 
 
 

@@ -26,6 +26,8 @@ $("#beer-search").on("click", function(event){
         searchTerm: searchterm
     }
 
+    $.post()
+
     console.log(searchterm + searchtype);
 
 })
