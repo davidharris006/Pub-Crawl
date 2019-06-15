@@ -7,6 +7,14 @@ h5 {
   text-align: center;
 }
 
+.anyClass {
+  height:500px;
+  overflow-y: scroll;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.475);
+
+}
+
 #submit {
   border-color: yellow;
   background: url("../images/beer-flowing.gif");
@@ -32,6 +40,21 @@ h5 {
   transform: translateY(4px);
 }
 
+.btn-group button {
+  float: left;
+  margin-right: 5px;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+/* .btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+} */
+
 #survey {
   border-width: 2px;
   font-size: 25px;
@@ -41,7 +64,7 @@ h5 {
   /* background-color: rgb(4, 40, 241); */
   font-weight: bolder;
   padding: 5px;
-  margin: 0 auto;
+  margin: 0px 30px 30px 0px;
   display: inline-block;
   box-shadow: 15px 15px 15px black;
   border-color: black;
@@ -55,6 +78,73 @@ h5 {
   background: url("../images/beer-flowing.gif");
 }
 
+#beerButton{
+  border-width: 2px;
+  font-size: 25px;
+  color: yellow;
+  text-align: center;
+  cursor: pointer;
+  /* background-color: rgb(4, 40, 241); */
+  font-weight: bolder;
+  padding: 5px;
+  margin: 0 30px 30px 0px;
+  display: inline-block;
+  box-shadow: 15px 15px 15px black;
+  border-color: black;
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 3px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  width: auto;
+  height: auto;
+  background: url("../images/beer-flowing.gif");
+}
+
+#found {
+  border-width: 2px;
+  font-size: 25px;
+  color: yellow;
+  text-align: center;
+  cursor: pointer;
+  /* background-color: rgb(4, 40, 241); */
+  font-weight: bolder;
+  padding: 5px;
+  margin: 0 30px 30px 0px;
+  display: inline-block;
+  box-shadow: 15px 15px 15px black;
+  border-color: black;
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 3px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  width: auto;
+  height: auto;
+  background: url("../images/beer-flowing.gif");
+}
+#redosurvey {
+  border-width: 2px;
+  font-size: 25px;
+  color: yellow;
+  text-align: center;
+  cursor: pointer;
+  /* background-color: rgb(4, 40, 241); */
+  font-weight: bolder;
+  padding: 5px;
+  margin: 0px 30px 30px 0px;
+  display: inline-block;
+  box-shadow: 15px 15px 15px black;
+  border-color: black;
+  border-style: solid;
+  border-radius: 7px;
+  border-width: 3px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  width: auto;
+  height: auto;
+  background: url("../images/beer-flowing.gif");
+}
 
 #survey:active {
   background-color: red; /* When the button is clicked */
@@ -158,17 +248,13 @@ body {
   font-weight: bold !important;
 }
 
-#beerButton {
-    color: black;
-    border: 2px solid black;
-}
-
 #beermap {
   margin-top: 20px;
   background-color: rgba(255, 194, 40, 0.413);
   border: 2px solid black;
   color: blue;
   font-weight: bold !important;
+  height: 850px;
 }
 
 #restext {
@@ -179,10 +265,9 @@ body {
     font-weight: bold !important;
 }
 
-
-
-
-
+#endloop {
+  color: yellow !important;
+}
 
 footer {
   text-align: center;

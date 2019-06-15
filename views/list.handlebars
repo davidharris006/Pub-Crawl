@@ -1,50 +1,57 @@
-  <div class="container" id="brewresults">
-
-      <div class="jumbotron" id="cheers">
+<div class="container-fluid" id="brewresults">
+  <div class="jumbotron" id="cheers">
     <h1 class="display-4">Cheers!</h1>
     <p class="lead">What's On Tap Today??</p>
-    <select class="chosen-select" >
+    <select class="chosen-select">
       <option value=""></option>
       <option value="5">Beer</option>
-      </select>
-
-
+    </select>
     <hr class="my-4">
     <p>Click submit button below for today's exclusive beer suggestions.</p>
-    <button class="btn btn-primary btn-lg" id="beerButton" role="button">Hydrate</a>
+    <button class="btn btn-primary btn-lg" id="beerButton" role="button">Hydrate</a></button>
   </div>
 
   <div class="jumbotron" id="beermap">
-      <h1 class="display-4">Cheers!</h1>
+    <h1 class="display-4">Cheers!</h1>
     <p class="lead" id="restext">Based on your interests, here is what similar folks are hydrating with today! </p>
+    <hr>
+    <div id="all-beerlist">
+      <ul class="anyClass">
+        {{#each beer}}
+        {{> beer_item/beer-block}}
+        {{/each}}
+      </ul>
 
-
-
-
-        <h1>Here are all the beers you can look at:</h1>
-        <hr>
-        <div id="all-beerlist">
-            <ul>
-            
-
-                {{#each beer}}
-                {{> beer_item/beer-block}}
-                {{/each}}
-                
-            </ul>
-            
+      <div class="btn-group">
+            <a href="http://localhost:8080/survey"></a><button class="btn btn-lg btn-primary" id="redosurvey">I don't want these beers!
+                <span class="fa fa-list-alt"></span>
+      <br>
+      <br>
+            <a href="http://localhost:8080/survey"></a><button class="btn btn-lg btn-primary" id="found">Yup. Let's send it!
+                <span class="fa fa-list-alt"></span>
+      </div>
+  <br>
+      <div class="container">
+            <p id="endloop"><a href="http://localhost:8080/">Home</a> | <a href="https://github.com/codytdrew/Pub-Crawl">GitHub</a></p>
           </div>
-</div>
+    </div>
+  </div>
+
+      <footer id="footer">
+        Copyright DaiЯy Qu3Яy 2019
+      </footer>
 </div>
 
-  <script>
-  $(document).ready(function() {
-  $("#beermap").hide();
-  $("#beerButton").click(function() {
-    console.log('hi')
-    $("#cheers").toggle();
-    $("#beermap").show();
+
+<script>
+  $(document).ready(function () {
+    $("#beermap").hide();
+    $("#beerButton").click(function () {
+      console.log('hi')
+      $("#cheers").toggle();
+      $("#beermap").show();
+    });
   });
-});
-  
-  </script>
+</script>
+
+
