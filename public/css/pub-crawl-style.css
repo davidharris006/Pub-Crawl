@@ -1,9 +1,4 @@
-* {
-  box-sizing: border-box;
-  padding: auto;
-  margin: auto;
-  text-align: center;
-}
+
 
 h3 {
   text-align: center;
@@ -95,7 +90,7 @@ header {
   margin-right: auto;
 }
 
-.container {
+.container-fluid {
   text-align: center;
   display: inline-block;
   margin: auto;
@@ -126,7 +121,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* object-fit: cover; */
+} */
 
 
 #boxsurvey {
@@ -139,20 +134,20 @@ h1 {
   font-weight: bolder !important;
 }
 
-#brewresults {
+body {
   text-align: center;
   font-size: 30 px;
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  width: 100vw !important;
+ 
   height: 100vh !important;
-  top: 0;
-  left: 0;
-  background: url("../images/Daybrew.jpg") !important;
+
+  background-image: url("../images/Daybrew.jpg") !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  /* object-fit: cover; */
+  background-attachment: fixed;
+  object-fit: cover;
 }
 
 #cheers {
@@ -215,37 +210,4 @@ footer {
 .wrapper {
   width: 1024px;
   margin: 40px auto;
-}
-
-@media only screen and (max-width: 980px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  header {
-    position: static;
-  }
-  .wrapper {
-    width: 600px;
-  }
 }
