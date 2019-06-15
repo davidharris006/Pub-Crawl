@@ -1,14 +1,50 @@
-  <div class="container">
-        <h1>Here are all the beers you can look at:</h1>
-        <hr>
-        <div id="all-beerlist">
-            <ul>
-            
+<div class="container" id="brewresults">
 
-                {{#each beer}}
-                {{> beer_item/beer-block}}
-                {{/each}}
-                
-            </ul>
-            
-        </div>
+  <div class="jumbotron" id="cheers">
+    <h1 class="display-4">Cheers!</h1>
+    <p class="lead">What's On Tap Today??</p>
+    <select class="chosen-select">
+      <option value=""></option>
+      <option value="5">Beer</option>
+    </select>
+
+
+    <hr class="my-4">
+    <p>Click submit button below for today's exclusive beer suggestions.</p>
+    <button class="btn btn-primary btn-lg" id="beerButton" role="button">Hydrate</a>
+  </div>
+
+  <div class="jumbotron" id="beermap">
+    <h1 class="display-4">Cheers!</h1>
+    <p class="lead" id="restext">Based on your interests, here is what similar folks are hydrating with today! </p>
+
+
+
+
+    <h1>Here are all the beers you can look at:</h1>
+    <hr>
+    <div id="all-beerlist">
+      <ul>
+
+
+        {{#each beer}}
+        {{> beer_item/beer-block}}
+        {{/each}}
+
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#beermap").hide();
+    $("#beerButton").click(function () {
+      console.log('hi')
+      $("#cheers").toggle();
+      $("#beermap").show();
+    });
+  });
+
+</script>
