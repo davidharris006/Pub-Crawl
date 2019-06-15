@@ -1,38 +1,71 @@
 
-var Search = {};
-
-$("#beer-search").on("click", function(event){
-    event.preventDefault();
-
-    const searchterm = $("#searched-term").val()
-    const searchtypestring = $("#search-type option:selected").text()
-    var searchtype;
+// var search = {};
+$(document).ready(function(){
+    $("#beer-search").on("click", function(event){
+        event.preventDefault();
+        console.log("its doing this");
+        const searchterm = $("#searched-term").val()
+        
+       
+        const searchtypestring = $("#search-type option:selected").text()
+        var searchtype;
+        
+        function createSearchterm () {
+            if (searchtypestring === "Breweries") {
+                searchtype = "name"
+            }
+            else if (searchtypestring === "Beer") {
+                searchtype = "beer_name"
+            }
+            else if (searchtypestring === "State"){
+                searchtype = "state"
+            }
+        };
+        createSearchterm(searchtypestring)
+        
+       search = {
+            searchType: searchtype,
+            searchTerm: searchterm
+        }
     
-    function createSearchterm () {
-        if (searchtypestring === "Breweries") {
-            searchtype = "name"
-        }
-        else if (searchtypestring === "Beer") {
-            searchtype = "beer_name"
-        }
-        else if (searchtypestring === "State"){
-            searchtype = "state"
-        }
-    };
-    createSearchterm(searchtypestring)
+    console.log(search);
     
-   Search = {
-        searchType: searchtype,
-        searchTerm: searchterm
+        $.post("/api/beers", search, function(data) {
+    if (data.length > 1){ 
+
+        console.log(data);
+        for(var i = 0; i < data.length; i++){
+            console.log(data[i]);
+            const list = $("<li>")
+            list.append(data[i].beer_name + " " + "<br>")
+            list.append("Brewery: " + data[i].name +"  ")
+            list.append("State: " + data[i].state)
+            $("#response-display").append(list)
+            
+        }
     }
-
-    $.post()
-
-    console.log(searchterm + searchtype);
+    else {
+        const list = $("<li>")
+            list.append(data.beer_name + " " + "<br>")
+            list.append("Brewery: " + data.name +"  ")
+            list.append("State: " + data.state)
+            $("#response-display").append(list)
+    }
+    
+            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+    
+            // Show the modal with the best match
+            
+          });
+        
+    
+   
+    
+    })
 
 })
 
-module.exports = Search;
+
 
 // .get("/api/beer", function(data) {
 //     console.log(data);
