@@ -1,12 +1,12 @@
-<div class="container-fluid" id="brewresults">
+  <div class="container" id="brewresults">
 
-  <div class="jumbotron" id="cheers">
+      <div class="jumbotron" id="cheers">
     <h1 class="display-4">Cheers!</h1>
     <p class="lead">What's On Tap Today??</p>
-    <select class="chosen-select">
+    <select class="chosen-select" >
       <option value=""></option>
       <option value="5">Beer</option>
-    </select>
+      </select>
 
 
     <hr class="my-4">
@@ -15,36 +15,36 @@
   </div>
 
   <div class="jumbotron" id="beermap">
-    <h1 class="display-4">Cheers!</h1>
+      <h1 class="display-4">Cheers!</h1>
     <p class="lead" id="restext">Based on your interests, here is what similar folks are hydrating with today! </p>
 
 
 
 
-    <h1>Here are all the beers you can look at:</h1>
-    <hr>
-    <div id="all-beerlist">
-      <ul>
+        <h1>Here are all the beers you can look at:</h1>
+        <hr>
+        <div id="all-beerlist">
+            <ul>
+            
 
-
-        {{#each beer}}
-        {{> beer_item/beer-block}}
-        {{/each}}
-
-      </ul>
-
-    </div>
-  </div>
+                {{#each beer}}
+                {{> beer_item/beer-block}}
+                {{/each}}
+                
+            </ul>
+            
+          </div>
+</div>
 </div>
 
-<script>
-  $(document).ready(function () {
-    $("#beermap").hide();
-    $("#beerButton").click(function () {
-      console.log('hi')
-      $("#cheers").toggle();
-      $("#beermap").show();
-    });
+  <script>
+  $(document).ready(function() {
+  $("#beermap").hide();
+  $("#beerButton").click(function() {
+    console.log('hi')
+    $("#cheers").toggle();
+    $("#beermap").show();
   });
-
-</script>
+});
+  
+  </script>
