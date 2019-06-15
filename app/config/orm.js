@@ -7,30 +7,33 @@ var orm = {
             FROM beer
             FULL JOIN breweries
             ON brewery_id = breweries.id
-            ORDER BY brewery_id;`, function (err, data) {
+            ORDER BY brewery_id;`, function (err, res) {
                 if (err) {
                     console.log(error)
                     res.sendStatus(500)
                 }
 
-                cb(data);
+                cb(res);
 
             });
     },
 
-    selectOne: function(searchterm, searchtype, cb){
+    selectOne: function(search, cb){
+        console.log("orm search", search)
         connection.query(
             `SELECT *
             FROM beer
             FULL JOIN breweries
             ON brewery_id = breweries.id
-            WHERE ${searchtype} LIKE ${searchterm};`, function (err, data) {
+            WHERE ${search.searchType} LIKE '%${search.searchTerm}%';`, function (err, res) {
+                console.log("res", res)
+                console.log("err", err)
+                
                 if (err) {
-                    console.log(error)
                     res.sendStatus(500)
                 }
 
-                cb(data);
+                cb(res);
 
             });
 }
