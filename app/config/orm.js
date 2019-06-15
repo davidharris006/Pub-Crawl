@@ -19,7 +19,6 @@ var orm = {
     },
 
     selectOne: function(search, cb){
-        console.log("orm search", search)
         connection.query(
             `SELECT *
             FROM beer
@@ -32,11 +31,28 @@ var orm = {
                 if (err) {
                     res.sendStatus(500)
                 }
-
+                
                 cb(res);
-
+                
             });
-}
+        },
+        
+        surveyQuestions: function(survey, cb){
+            console.log("orm search", survey)
+        connection.query(
+            `SELECT *
+            FROM beer
+            FULL JOIN breweries
+            ON brewery_id = breweries.id
+            WHERE (ounces LIKE '${survey.size}')
+            OR (OR state = '${survey.state}');`, function (err, res){
+                if (err) {
+                    res.sendStatus(500)
+                }
+                cb(res)
+            }
+        )
+    }
 
 
 };

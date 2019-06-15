@@ -18,7 +18,6 @@ h3 {
   font-size: 30px;
   
 }
-
 h5 {
   text-align: center;
 }
@@ -89,18 +88,20 @@ input {
   box-shadow: 15px 15px 15px black;
   border-radius: 20px;
 }
+.anyClass {
+  height:500px;
+  overflow-y: scroll;
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.475);
 
-.questions {
-  padding: 50px;
-  text-align: center;
-  display: inline-block;
 }
 
 #submit {
-  
+  border-color: yellow;
   background: url("../images/beer-flowing.gif");
+  border-style: solid;
   border-radius: 7px;
-  border: 5px inset black;
+  border-width: 3px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   font-size: 35px;
@@ -122,7 +123,21 @@ input {
   transform: translateY(4px);
 }
 
-#survey {
+.btn-group button {
+  float: left;
+}
+
+.btn-group button:not(:last-child) {
+  border-right: none;
+}
+
+.btn-group:after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#survey, #redosurvey, #beerButton, #found {
   border-width: 2px;
   font-size: 25px;
   color: yellow;
@@ -130,8 +145,8 @@ input {
   cursor: pointer;
   /* background-color: rgb(4, 40, 241); */
   font-weight: bolder;
-  padding: 7px;
-  margin: 15px;
+  padding: 5px;
+  margin: 0px 30px 30px 0px;
   display: inline-block;
   box-shadow: 15px 15px 15px black;
   border-color: black;
@@ -140,7 +155,6 @@ input {
   border-width: 3px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  
   width: auto;
   height: auto;
   background: url("../images/beer-flowing.gif");
@@ -154,7 +168,6 @@ input {
 }
 
 div {
-  padding: 20px;
   display: inline-block;
   font-size: 20px;
   font-weight: bolder;
@@ -186,10 +199,7 @@ header {
   text-align: center;
   display: inline-block;
   margin: auto;
-  color: yellow;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
-  padding: 20px;
+  color: black;
 }
 
 #container {
@@ -199,7 +209,6 @@ header {
   color: yellow;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  padding: 30px;
 }
 
 
@@ -222,7 +231,10 @@ header {
   width: 70%;
 }
 
-
+h1 {
+  text-align: center; 
+  font-weight: bolder !important;
+}
 
 body {
   text-align: center;
@@ -252,17 +264,13 @@ body {
   font-weight: bold !important;
 }
 
-#beerButton {
-    color: black;
-    border: 2px solid black;
-}
-
 #beermap {
   margin-top: 20px;
   background-color: rgba(255, 194, 40, 0.413);
   border: 2px solid black;
   color: blue;
   font-weight: bold !important;
+  height: 850px;
 }
 
 #restext {

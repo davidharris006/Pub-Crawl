@@ -32,15 +32,15 @@ router.get("/beers", function (req, res) {
     res.render("list", responseData);
   });
 });
-router.get("/api/beers", function (req, res) {
-  beer.selectAll(function (data) {
-    var responseData = {
-      beer: data
-    };
-// console.log(responseData);
-    res.json(responseData);
-  });
-});
+// router.get("/api/beers", function (req, res) {
+//   beer.selectAll(function (data) {
+//     var responseData = {
+//       beer: data
+//     };
+// // console.log(responseData);
+//     res.json(responseData);
+//   });
+// });
 
 // http://.../beer?name="this_is_a_name"
 router.get("/beer", function (req, res) {
@@ -67,6 +67,14 @@ router.get("/beer", function (req, res) {
 router.post("/api/beers", function (req, res){
   console.log("beerController req.body", req.body);
   beer.selectOne(req.body, function(data){
+    console.log("beerController data", data);
+    var response = data
+    res.json(response)
+  })
+})
+router.post("/api/survey", function (req, res){
+  console.log("beerController req.body", req.body);
+  beer.surveyQuestions(req.body, function(data){
     console.log("beerController data", data);
     var response = data
     res.json(response)
