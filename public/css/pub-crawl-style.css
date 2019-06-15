@@ -1,12 +1,93 @@
 
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: bolder !important;
+}
+
+h2 {
+  text-align: center;
+  padding: 15px;
+
+}
 
 h3 {
   text-align: center;
+  margin-top: 20px;
+  padding: 35px;
+  font-size: 30px;
+  
 }
 h5 {
   text-align: center;
 }
 
+strong {
+  text-align: center;
+}
+
+option {
+  margin: 35px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+font-family: 'Courier New', Courier, monospace;
+  box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
+  border-style: groove;
+  border-width: 2px;
+  text-align: center;
+}
+
+select {
+  margin: 30px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: black;
+font-family: 'Courier New', Courier, monospace;
+  box-shadow: 15px 15px 15px black;
+  border-radius: 15px;
+  border-style: groove;
+  border-width: 2px;
+  text-align: center;
+}
+
+
+
+#surveybox {
+  background-color: rgba(126, 128, 0, 0.582);
+  color: rgb(98, 0, 255);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  margin: 45px;
+  box-shadow: 15px 15px 12px red;
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: inset;
+  border-color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  padding: 35px;
+  text-align: center;
+ 
+}
+
+img {
+  margin: 10px;
+  box-shadow: 15px 15px 15px black;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-style: inherit;
+}
+
+input {
+  margin: 35px;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 25px;
+  box-shadow: 15px 15px 15px black;
+  border-radius: 20px;
+}
 .anyClass {
   height:500px;
   overflow-y: scroll;
@@ -15,7 +96,7 @@ h5 {
 
 }
 
-#submit {
+#surveysubmit {
   border-color: yellow;
   background: url("../images/beer-flowing.gif");
   border-style: solid;
@@ -23,16 +104,18 @@ h5 {
   border-width: 3px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bolder;
   color: yellow;
   box-shadow: 15px 15px 15px black;
-  
+  cursor: pointer;
+  text-shadow: 4px 2px black;
+  text-align: center;
+  margin-bottom: 10px;
+  background-attachment: fixed;
+  background-repeat: round;
 }
 
-#submit:hover {
-  background-color: red; /* When the button is clicked */
-}
 
 #submit:active {
   background-color: red; /* When the button is clicked */
@@ -135,11 +218,8 @@ header {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  min-width: 100%;
-  min-height: 100%;
-  top: 0;
-  left: 0;
-  background: url("../images/pub.jpg");
+ 
+  background: url("../images/Daybrew.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -162,7 +242,10 @@ body {
   color: white;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
- 
+  /* min-width: 100%;
+  min-height: 100%; */
+  top: 0;
+  left: 0;
   height: 100vh !important;
 
   background-image: url("../images/Daybrew.jpg") !important;
@@ -170,6 +253,7 @@ body {
   background-size: cover !important;
   background-attachment: fixed;
   object-fit: cover;
+  
 }
 
 #cheers {
@@ -196,11 +280,6 @@ body {
 .lead {
     font-weight: bold !important;
 }
-
-
-
-
-
 
 footer {
   text-align: center;
@@ -229,3 +308,37 @@ footer {
   width: 1024px;
   margin: 40px auto;
 }
+
+
+/* @media only screen and (max-width: 980px) {
+  body {
+    max-width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    max-width: 100%;
+    height: auto;
+  }
+  .wrapper {
+    width: 800px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  body {
+    max-width: 100%;
+    height: auto;
+  }
+  header {
+    position: static;
+  }
+  .wrapper {
+    width: 600px;
+  }
+} */
