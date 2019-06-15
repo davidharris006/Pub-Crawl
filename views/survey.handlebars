@@ -1,26 +1,25 @@
-<div class="container">
+<div class="container-fluid">
   <div class="row">
-    <div class="col-lg-3"></div>
-    <div class="col-lg-4">
-      <br />
-      <h1><img src="./images/beer-glasses-left.gif" width="50px";height="40px;"> Find YOUR Perfect Beer! <img
-          src="./images/beer-glasses-right.gif" width="50px";height="40px;"></h1>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10" id="surveybox">
+
+
+      <h1><img src="./images/beer-glasses-left.gif" width="50px" ;height="40px;"> Find YOUR Perfect Beer! <img
+          src="./images/beer-glasses-right.gif" width="50px" ;height="40px;"></h1>
       <hr />
 
       <h2>Name (Required)</h2>
 
-      <h2></h2>
       <input type="text" id="name" class="form-control" required />
 
 
-      <h3>Link to Photo Image (Required)
+      <h2>Link to Photo Image (Required)
         <input type="text" id="photo" class="form-control" required />
-      </h3>
+      </h2>
       <hr />
 
 
-      <h3><strong>1. Preferred alcohol by volume:</strong></h3>
-      <select class="chosen-select" id="q1">
+      <h3><strong>1. Preferred alcohol by volume: </strong></h3><select class="chosen-select" id="q1">
         <option value=""></option>
         <option value="1">2.2% - 4.5%</option>
         <option value="2">4.6% - 7.5%</option>
@@ -28,6 +27,7 @@
         <option value="4">9.6% - 11.5%</option>
         <option value="5">11.6% - 15%</option>
       </select>
+     
 
       <h3>
         <strong>2. Which US state do you want your beer to come from?</strong>
@@ -160,7 +160,7 @@
         <option value="4">100</option>
         <option value="5"> 165</option>
       </select>
-     
+
 
       <h3><strong>11. Which of the following countries consumes the most beer?</strong></h3>
       <select class="chosen-select" id="q10">
@@ -171,17 +171,18 @@
         <option value="4"> USA</option>
         <option value="5"> Greece</option>
       </select>
-    <br><br>
-     
-      <!-- Submit Button -->
+      <br><br>
 
+      <!-- Submit Button -->
+  <div>
       <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit">
         <i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT
       </button>
-
+</div>
     </div>
+    <div class="col-lg-1"></div>
   </div>
-
+</div>
 
   <!-- Modal -->
   <div class="row">
@@ -205,7 +206,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
 <hr />
 <footer id="footer">
