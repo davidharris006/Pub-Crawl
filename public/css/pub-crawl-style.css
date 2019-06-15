@@ -96,7 +96,7 @@ input {
 
 }
 
-#submit {
+#surveysubmit {
   border-color: yellow;
   background: url("../images/beer-flowing.gif");
   border-style: solid;
