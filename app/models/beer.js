@@ -11,6 +11,11 @@ var beer = {
         orm.selectOne(searchterm, searchtype, function(res){
             cb(res);
         })
+    },
+    surveyQuestions: function (survey, cb){
+        orm.surveyQuestions(survey, function(res){
+            cb(res);
+        })
     }
     // The variables cols and vals are arrays.
     //   create: function(cols, vals, cb) {
