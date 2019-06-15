@@ -1,13 +1,9 @@
-* {
-  box-sizing: border-box;
-  padding: auto;
-  margin: auto;
-  text-align: center;
-}
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
+  
+  font-weight: bolder !important;
 }
 
 h2 {
@@ -168,7 +164,7 @@ header {
   margin-right: auto;
 }
 
-.container {
+.container-fluid {
   text-align: center;
   display: inline-block;
   margin: auto;
@@ -189,7 +185,7 @@ header {
 }
 
 
-body {
+/* body {
   text-align: center;
   font-size: 30 px;
   color: white;
@@ -203,13 +199,63 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  /* object-fit: cover; */
-}
+} */
+
 
 #boxsurvey {
   background-color: rgba(255, 113, 113, 0.24);
   width: 70%;
 }
+
+
+
+body {
+  text-align: center;
+  font-size: 30 px;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+ 
+  height: 100vh !important;
+
+  background-image: url("../images/Daybrew.jpg") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed;
+  object-fit: cover;
+}
+
+#cheers {
+  margin-top: 20px;
+  background-color: rgba(255, 194, 40, 0.434);
+  border: 2px solid black;
+  color: blue;
+  font-weight: bold !important;
+}
+
+#beerButton {
+    color: black;
+    border: 2px solid black;
+}
+
+#beermap {
+  margin-top: 20px;
+  background-color: rgba(255, 194, 40, 0.413);
+  border: 2px solid black;
+  color: blue;
+  font-weight: bold !important;
+}
+
+#restext {
+  font-size: 32px !important
+}
+
+.lead {
+    font-weight: bold !important;
+}
+
+
+
 
 
 
@@ -239,37 +285,4 @@ footer {
 .wrapper {
   width: 1024px;
   margin: 40px auto;
-}
-
-@media only screen and (max-width: 980px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  header {
-    position: static;
-  }
-  .wrapper {
-    width: 600px;
-  }
 }
