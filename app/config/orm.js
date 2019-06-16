@@ -44,8 +44,10 @@ var orm = {
             FROM beer
             FULL JOIN breweries
             ON brewery_id = breweries.id
-            WHERE (ounces LIKE '${survey.size}')
-            OR (OR state = '${survey.state}');`, function (err, res){
+            WHERE (beer_name LIKE '%${survey.color}%')
+            OR (ounces LIKE '%${survey.size}%')
+            OR (state LIKE '${survey.state}');`, function (err, res){
+                console.log("response " + res);
                 if (err) {
                     res.sendStatus(500)
                 }

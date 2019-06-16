@@ -1,6 +1,8 @@
 
 // var search = {};
 $(document).ready(function(){
+    
+    $("#hidebox").hide()
     $("#beer-search").on("click", function(event){
         event.preventDefault();
         console.log("its doing this");
@@ -36,10 +38,13 @@ $(document).ready(function(){
         console.log(data);
         for(var i = 0; i < data.length; i++){
             console.log(data[i]);
+            const div = $('<div>')
             const list = $("<li>")
-            list.append(data[i].beer_name + " " + "<br>")
+            const breakline = $("<br>")
+            list.append(data[i].beer_name + " " + breakline)
             list.append("Brewery: " + data[i].name +"  ")
             list.append("State: " + data[i].state)
+            div.append(list)
             $("#response-display").append(list)
             
         }
@@ -65,8 +70,9 @@ $(document).ready(function(){
 
     $("#surveysubmit").on("click", function(event){
         event.preventDefault();
+            $("#hidebox").show();
         console.log("its doing this too");
-       
+       $("#displaycontainer").css("display", "block")
         
        
         const abv = $("#q1 option:selected").text()
