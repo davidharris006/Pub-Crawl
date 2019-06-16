@@ -87,6 +87,7 @@ input {
   padding: 25px;
   box-shadow: 15px 15px 15px black;
   border-radius: 20px;
+  width: auto;
 }
 .anyClass {
   height:500px;
@@ -97,27 +98,29 @@ input {
 }
 
 #surveysubmit {
-  border-color: yellow;
   background: url("../images/beer-flowing.gif");
-  border-style: solid;
-  border-radius: 7px;
-  border-width: 3px;
+  border: 10px inset maroon;
+  border-radius: 27px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   font-size: 35px;
   font-weight: bolder;
   color: yellow;
-  box-shadow: 15px 15px 15px black;
+  box-shadow: 7px 7px 7px black;
   cursor: pointer;
-  text-shadow: 4px 2px black;
+  /* text-shadow: 4px 2px; */
   text-align: center;
   margin-bottom: 10px;
   background-attachment: fixed;
-  background-repeat: round;
+  /* background-repeat: round; */
+}
+
+#surveysubmit:hover {
+  color: red;
 }
 
 
-#submit:active {
+#surveysubmit:active {
   background-color: red; /* When the button is clicked */
   box-shadow: 0 7px green;
   transform: translateY(4px);
@@ -149,15 +152,15 @@ input {
   margin: 0px 30px 30px 0px;
   display: inline-block;
   box-shadow: 15px 15px 15px black;
-  border-color: black;
-  border-style: solid;
+  border: 3px black solid;
   border-radius: 7px;
-  border-width: 3px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   width: auto;
   height: auto;
-  background: url("../images/beer-flowing.gif");
+  background: url("../images/beer-side-flowing.gif");
+  background-attachment: inherit;
+  
 }
 
 
