@@ -10,6 +10,9 @@ h2 {
   padding: 15px;
 
 }
+.beerheader {
+  text-align: left;
+}
 
 h3 {
   text-align: center;
@@ -24,6 +27,29 @@ h5 {
 
 strong {
   text-align: center;
+}
+
+
+
+#displaycontainer {
+  background-color: rgba(126, 128, 0, 0.35);
+  color:  rgb(11, 0, 29);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+  margin: 45px;
+  box-shadow: 15px 15px 12px rgb(255, 255, 255, 0.35);
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: inset;
+  border-color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  padding: 35px;
+  text-align: center; background-color: rgba(126, 128, 0, 0.35);
+  overflow: auto;
+  height: 50vh;
+  
 }
 
 option {
@@ -55,12 +81,12 @@ font-family: 'Courier New', Courier, monospace;
 
 
 #surveybox {
-  background-color: rgba(126, 128, 0, 0.582);
-  color: rgb(98, 0, 255);
+  background-color: rgba(126, 128, 0, 0.35);
+  color: rgb(11, 0, 29);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bolder;
   margin: 45px;
-  box-shadow: 15px 15px 12px red;
+  box-shadow: 15px 15px 12px rgb(255, 255, 255, 0.35);
   border-radius: 20px;
   border-width: 3px;
   border-style: inset;
@@ -169,7 +195,7 @@ input {
 
 div {
   display: inline-block;
-  font-size: 20px;
+  /* font-size: 20px; */
   font-weight: bolder;
   /* color: white; */
   -webkit-text-stroke-width: 1px;
