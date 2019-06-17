@@ -20,7 +20,7 @@
       <hr />
 
 
-      <h3><strong>1. Preferred alcohol by volume: </strong></h3><select class="chosen-select" id="q1">
+      <h3><strong> 1. Preferred alcohol by volume: </strong></h3><select class="chosen-select" id="q1">
         <option value=""></option>
         <option value="1">2.2% - 4.5%</option>
         <option value="2">4.6% - 7.5%</option>
@@ -28,10 +28,10 @@
         <option value="4">9.6% - 11.5%</option>
         <option value="5">11.6% - 15%</option>
       </select>
-     
+
 
       <h3>
-        <strong>2. Which US state do you want your beer to come from?</strong>
+        <strong> 2. Which US state do you want your beer to come from? </strong>
       </h3>
       <select class="chosen-select" id="q2">
         <option value=""></option>
@@ -88,7 +88,7 @@
       </select>
 
 
-      <h3><strong>3. What size of beer do you seek?</strong></h3>
+      <h3><strong> 3. What size of beer do you seek? </strong></h3>
       <select class="chosen-select" id="q3">
         <option value=""></option>
 
@@ -173,14 +173,21 @@
         <option value="5"> Greece</option>
       </select>
       <br><br>
-
-      <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveysubmit">
-        <i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT
-      </button>
-</div>
+      <div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block" id="surveysubmit">
+          <i class="fa fa-check-circle" aria-hidden="true"></i> SUBMIT
+        </button>
+      </div>
     </div>
-    <div class="col-lg-1"></div>
   </div>
+  <div class="col-lg-1"></div>
+</div>
+<div class="surveyresults">
+  <ul id="surveyresdispaly">
+
+  </ul>
+
+</div>
   <div id="hidebox">
 <div class="surverytext">
 
@@ -197,28 +204,28 @@
   </div>
 
 
-  <!-- Modal -->
-  <div class="row">
-    <div id="results-modal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button class="close" data-dismiss="modal">&times;</button>
-            <h2 class="modal-title"><strong>Best Match</strong></h2>
-          </div>
-          <div class="modal-body">
-            <h2 id="match-name"></h2>
-            <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
-              alt="" />
-          </div>
-          <div class="modal-footer">
-            <a href="http://localhost:8080/beers"><button class="btn btn-default" data-dismiss="modal">Close</button></a>
-          </div>
+<!-- Modal -->
+<div class="row">
+  <div id="results-modal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button class="close" data-dismiss="modal">&times;</button>
+          <h2 class="modal-title"><strong>Best Match</strong></h2>
+        </div>
+        <div class="modal-body">
+          <h2 id="match-name"></h2>
+          <img id="match-img" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg"
+            alt="" />
+        </div>
+        <div class="modal-footer">
+          <a href="http://localhost:8080/beers"><button class="btn btn-default" data-dismiss="modal">Close</button></a>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
 <hr />
