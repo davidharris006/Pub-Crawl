@@ -29,15 +29,17 @@ strong {
   text-align: center;
 }
 
-
+#hidebox {
+  color: yellow;
+}
 
 #displaycontainer {
   background-color: rgba(126, 128, 0, 0.35);
-  color:  rgb(11, 0, 29);
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bolder;
   font-size: 35px;
   margin: 45px;
+ 
   box-shadow: 15px 15px 12px rgb(255, 255, 255, 0.35);
   border-radius: 20px;
   border-width: 3px;
@@ -46,14 +48,14 @@ strong {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   padding: 35px;
-  text-align: center; background-color: rgba(126, 128, 0, 0.35);
+  text-align: center; 
   overflow: auto;
   height: 50vh;
   
 }
 #response-display {
   background-color: rgba(126, 128, 0, 0.35);
-  color:  rgb(11, 0, 29);
+  color:  yellow !important;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bolder;
   font-size: 35px;
@@ -102,7 +104,7 @@ font-family: 'Courier New', Courier, monospace;
 
 #surveybox {
   background-color: rgba(126, 128, 0, 0.35);
-  color: rgb(11, 0, 29);
+  color: yellow;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-weight: bolder;
   margin: 45px;
@@ -191,6 +193,7 @@ input {
 }
 #surveydisplay {
   line-height: 10px;
+  color: yellow;
 }
 
 #survey, #redosurvey, #beerButton, #found {
@@ -199,7 +202,7 @@ input {
   color: yellow;
   text-align: center;
   cursor: pointer;
-  /* background-color: rgb(4, 40, 241); */
+ 
   font-weight: bolder;
   padding: 5px;
   margin: 0px 30px 30px 0px;
@@ -225,9 +228,7 @@ input {
 
 div {
   display: inline-block;
-  /* font-size: 20px; */
   font-weight: bolder;
-  /* color: white; */
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
 }
