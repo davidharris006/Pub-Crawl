@@ -1,5 +1,4 @@
 
-// var search = {};
 $(document).ready(function () {
     $('#response-display').hide()
     $("#hidebox").hide()
@@ -7,7 +6,6 @@ $(document).ready(function () {
         event.preventDefault();
         $('#response-display').show()
         $("#response-display").empty()
-        console.log("its doing this");
         const searchterm = $("#searched-term").val()
 
 
@@ -32,12 +30,10 @@ $(document).ready(function () {
             searchTerm: searchterm
         }
 
-        console.log(search);
 
         $.post("/api/beers", search, function (data) {
             if (data.length > 1) {
 
-                console.log(data);
                 for (var i = 0; i < data.length; i++) {
                     console.log(data[i]);
                     const div = $('<div>')
@@ -46,11 +42,11 @@ $(document).ready(function () {
                     list.addClass("listitems")
                     list.append(data[i].beer_name + " ")
                     list.append("Brewery: " + data[i].name + "  ")
-                    list.append("State: " + data[i].state +"<hr>")
+                    list.append("State: " + data[i].state + "<hr>")
                     div.append(list)
                     $("#response-display").append(list)
 
-                } 
+                }
             }
             else {
                 if (typeof data.beer_name === "undefined") {
@@ -67,9 +63,8 @@ $(document).ready(function () {
                 }
             }
 
-            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-
-            // Show the modal with the best match
+            
+          
 
         });
 
@@ -81,8 +76,8 @@ $(document).ready(function () {
     $("#surveysubmit").on("click", function (event) {
         event.preventDefault();
         $("#hidebox").show();
-        console.log("its doing this too");
-        $("#displaycontainer").css("display", "block")
+
+
 
 
         const abv = $("#q1 option:selected").text()
@@ -101,7 +96,7 @@ $(document).ready(function () {
             color: name
         }
 
-        console.log(survey);
+
 
         $.post("/api/survey", survey, function (data) {
             if (data.length > 1) {
@@ -111,7 +106,7 @@ $(document).ready(function () {
                     console.log(data[i]);
                     const list = $("<li>")
                     list.addClass("listitems")
-                    list.append("<hr>" +"Beer: " + data[i].beer_name + "<br> ")
+                    list.append("<hr>" + "Beer: " + data[i].beer_name + "<br> ")
                     list.append("Brewery: " + data[i].name + "  ")
                     list.append("loacted in " + data[i].state)
                     $("#surveyresdispaly").append(list)
@@ -127,38 +122,18 @@ $(document).ready(function () {
                 $("#surveyresdispaly").append(list)
             }
 
-            // Grab the result from the AJAX post so that the best match's name and photo are displayed.
 
-            // Show the modal with the best match
+
+
 
         });
 
+        function processSurvey() {
+            for (var i = 1; i < 11; i++) {
 
+            }
+        }
 
 
     })
 })
-
-
-
-// .get("/api/beer", function(data) {
-//     console.log(data);
-//     if (data.length !== 0) {
-
-//       for (var i = 0; i < data.length; i++) {
-
-//         var row = $("<tr>");
-//         row.addClass("beer");
-
-//         row.append("<td>" + data[i].beer_name + "</td>");
-//         row.append("<td>" + data[i].name + "</td>");
-//         row.append("<td> " + moment(data[i].created_at).format("h:mma on dddd") + "</td>");
-
-//         $("#all-beerlist").append(row);
-
-//       }
-
-//     }
-
-//   });
-// });
