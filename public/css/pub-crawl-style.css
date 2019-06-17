@@ -51,6 +51,26 @@ strong {
   height: 50vh;
   
 }
+#response-display {
+  background-color: rgba(126, 128, 0, 0.35);
+  color:  rgb(11, 0, 29);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 35px;
+  margin: 45px;
+  box-shadow: 15px 15px 12px rgb(255, 255, 255, 0.35);
+  border-radius: 20px;
+  border-width: 3px;
+  border-style: inset;
+  border-color: black;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: black;
+  padding: 35px;
+  text-align: center; background-color: rgba(126, 128, 0, 0.35);
+  overflow: auto;
+  height: 50vh;
+  
+}
 
 option {
   margin: 35px;
@@ -106,6 +126,13 @@ img {
   border-style: inherit;
 }
 
+.listitems {
+  padding: 15px;
+  
+}
+hr {
+  height: 5px !important;
+}
 input {
   margin: 35px;
   font-size: 17px;
@@ -161,6 +188,9 @@ input {
   content: "";
   clear: both;
   display: table;
+}
+#surveydisplay {
+  line-height: 10px;
 }
 
 #survey, #redosurvey, #beerButton, #found {
@@ -237,26 +267,6 @@ header {
   -webkit-text-stroke-color: black;
 }
 
-
-/* body {
-  text-align: center;
-  font-size: 30 px;
-  color: white;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
- 
-  background: url("../images/Daybrew.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-} */
-
-
-#boxsurvey {
-  background-color: rgba(255, 113, 113, 0.24);
-  width: 70%;
-}
-
 h1 {
   text-align: center; 
   font-weight: bolder !important;
@@ -267,7 +277,7 @@ body {
   font-size: 30 px;
   color: white;
   -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-color: white;
   /* min-width: 100%;
   min-height: 100%; */
   top: 0;
@@ -284,7 +294,7 @@ body {
 
 #cheers {
   margin-top: 20px;
-  background-color: rgba(255, 194, 40, 0.434);
+  background-color: rgba(126, 128, 0, 0.35);
   border: 2px solid black;
   color: blue;
   font-weight: bold !important;
@@ -292,7 +302,7 @@ body {
 
 #beermap {
   margin-top: 20px;
-  background-color: rgba(255, 194, 40, 0.413);
+  background-color: rgba(126, 128, 0, 0.35);
   border: 2px solid black;
   color: blue;
   font-weight: bold !important;
@@ -317,9 +327,9 @@ footer {
 }
 
 .footer {
-  position: absolute;
+  position: relative;
   left: 0;
-  bottom: 0;
+  bottom: -500;
   width: 100%;
 }
 
@@ -333,6 +343,41 @@ footer {
 .wrapper {
   width: 1024px;
   margin: 40px auto;
+}
+
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #000000;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #626a69;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
 
 

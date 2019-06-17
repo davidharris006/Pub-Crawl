@@ -16,11 +16,11 @@
     <p class="lead" id="restext">Based on your interests, here is what similar folks are hydrating with today! </p>
     <hr>
     <div id="all-beerlist">
-      <ul class="anyClass">
+      <ol class="anyClass">
         {{#each beer}}
         {{> beer_item/beer-block}}
         {{/each}}
-      </ul>
+      </ol>
 
       <div class="btn-group">
             <a href="http://localhost:8080/survey/"><button class="btn btn-lg btn-primary" id="redosurvey">I don't want these beers!
