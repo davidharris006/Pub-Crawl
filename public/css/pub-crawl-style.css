@@ -1,3 +1,6 @@
+a {
+color: black !important;
+}
 
 h1 {
   text-align: center;
@@ -19,13 +22,26 @@ h3 {
   margin-top: 20px;
   padding: 35px;
   font-size: 30px;
+  font-weight: bolder;
+  color: yellow;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   
 }
+.homebutton {
+  top: 0;
+  left: 0;
+  position: fixed;
+  color: black !important;
+}
+
 h5 {
   text-align: center;
 }
 
 strong {
+  background-color: rgba(0, 0, 0, 0.555);
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -85,7 +101,7 @@ font-family: 'Courier New', Courier, monospace;
   border-style: groove;
   border-width: 2px;
   text-align: center;
-}
+ } 
 
 select {
   margin: 30px;
@@ -98,7 +114,9 @@ font-family: 'Courier New', Courier, monospace;
   border-style: groove;
   border-width: 2px;
   text-align: center;
+  cursor: pointer;
 }
+
 
 
 
@@ -142,6 +160,7 @@ input {
   padding: 25px;
   box-shadow: 15px 15px 15px black;
   border-radius: 20px;
+  width: auto;
 }
 .anyClass {
   height:500px;
@@ -152,27 +171,29 @@ input {
 }
 
 #surveysubmit {
-  border-color: yellow;
   background: url("../images/beer-flowing.gif");
-  border-style: solid;
-  border-radius: 7px;
-  border-width: 3px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: black;
+  border: 10px double black;
+  border-radius: 18px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;
   font-size: 35px;
   font-weight: bolder;
-  color: yellow;
-  box-shadow: 15px 15px 15px black;
+  color: black;
+  box-shadow: 10px 10px 20px 10px black;
   cursor: pointer;
-  text-shadow: 4px 2px black;
+  text-shadow: 4px 2px;
   text-align: center;
   margin-bottom: 10px;
   background-attachment: fixed;
-  background-repeat: round;
+  /* background-repeat: round; */
+}
+
+#surveysubmit:hover {
+  color: red;
 }
 
 
-#submit:active {
+#surveysubmit:active {
   background-color: red; /* When the button is clicked */
   box-shadow: 0 7px green;
   transform: translateY(4px);
@@ -208,15 +229,15 @@ input {
   margin: 0px 30px 30px 0px;
   display: inline-block;
   box-shadow: 15px 15px 15px black;
-  border-color: black;
-  border-style: solid;
+  border: 3px black solid;
   border-radius: 7px;
-  border-width: 3px;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
   width: auto;
   height: auto;
-  background: url("../images/beer-flowing.gif");
+  background: url("../images/beer-side-flowing.gif");
+  background-attachment: inherit;
+  
 }
 
 
@@ -381,36 +402,3 @@ footer {
   background: transparent;
 }
 
-
-/* @media only screen and (max-width: 980px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  .wrapper {
-    width: 800px;
-  }
-}
-
-@media only screen and (max-width: 640px) {
-  body {
-    max-width: 100%;
-    height: auto;
-  }
-  header {
-    position: static;
-  }
-  .wrapper {
-    width: 600px;
-  }
-} */
