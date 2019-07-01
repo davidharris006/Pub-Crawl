@@ -14,6 +14,15 @@ router.get("/", function (req, res) {
  
 });
 
+// router.get("/api/user/me", function (req, res) {
+//   res.json(res)
+// });
+
+router.get("/loggedin", function (req, res) {
+ 
+   res.render("indexloggedin");
+ 
+});
 
 router.get("/survey", function (req, res) {
  
@@ -28,7 +37,7 @@ router.get("/beers", function (req, res) {
     var responseData = {
       beer: data
     };
-// console.log(responseData);
+// console.log(data);
     res.render("list", responseData);
   });
 });

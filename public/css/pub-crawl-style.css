@@ -7,6 +7,19 @@ h1 {
   margin-bottom: 20px;
   font-weight: bolder !important;
 }
+.googlebutton {
+  top: 0;
+  right: 0;
+  position: fixed;
+  color: white !important;
+  font-size: 15px !important;
+}
+#googlebuttonimg {
+ src: url("../images/logoagain.jpg");
+ height: 50px;
+ width:25px;
+
+}
 
 h2 {
   text-align: center;
@@ -33,6 +46,10 @@ h3 {
   left: 0;
   position: fixed;
   color: black !important;
+}
+#savebtn {
+  text-align: left !important;
+  justify-items: left;
 }
 
 h5 {
@@ -217,7 +234,7 @@ input {
   color: yellow;
 }
 
-#survey, #redosurvey, #beerButton, #found {
+#survey, #redosurvey, #beerButton, #found, #savebtn {
   border-width: 2px;
   font-size: 25px;
   color: yellow;

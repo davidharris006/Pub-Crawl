@@ -1,7 +1,27 @@
 
 $(document).ready(function () {
+    // var passport = require('passport')
+
     $('#response-display').hide()
     $("#hidebox").hide()
+
+    function saveSelected (id) {
+      const savedBeer =  $(`#${id}`).parent("li").text()
+      console.log(savedBeer);
+    }
+$('#savebtn').on("click", function(event){
+    event.preventDefault();
+    $("#beerlist").children('li').each(function () {
+        $(this).children('input').each(function () {
+        if($(this).prop("checked") == true){
+            const saveId = ($(this).attr('id'));
+            saveSelected(saveId)
+        }
+    });  
+})
+})  
+
+
     $("#beer-search").on("click", function (event) {
         event.preventDefault();
         $('#response-display').show()
@@ -105,10 +125,12 @@ $(document).ready(function () {
                 for (var i = 0; i < data.length; i++) {
                     console.log(data[i]);
                     const list = $("<li>")
+                    const checkbox = $("<input type='checkbox' style='margin: 15px; transform: scale(1.5);' id='"+ data[i].idbeer + "'>")
+                    list.append(checkbox)
                     list.addClass("listitems")
-                    list.append("<hr>" + "Beer: " + data[i].beer_name + "<br> ")
+                    list.append("Beer: " + data[i].beer_name + "<br> ")
                     list.append("Brewery: " + data[i].name + "  ")
-                    list.append("loacted in " + data[i].state)
+                    list.append("loacted in " + data[i].state + "<hr>") 
                     $("#surveyresdispaly").append(list)
 
                 }

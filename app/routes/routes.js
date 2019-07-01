@@ -1,18 +1,38 @@
 var passport = require("../config/passport")
+var Handlebars =require("handlebars");
 
 module.exports = function(app) {
 
-    app.get('/auth/google',
-    passport.authenticate('google', { scope: 'https://www.google.com/m8/feeds' }))
+  app.get('/auth/google',
+  passport.authenticate('google', { scope: ['email', 'profile'] }));
+
+app.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/login' }),
+  function(req, res) {
+    console.log(user);
+    // Successful authentication, redirect home.
+   
+    // console.log(userData.email + userData.name);
+    Handlebars.registerPartial("user-block",
+    user);
+    res.redirect('/loggedin');
+    
+  });
   
-  // GET /auth/google/callback
-  //   Use passport.authenticate() as route middleware to authenticate the
-  //   request.  If authentication fails, the user will be redirected back to the
-  //   login page.  Otherwise, the primary route function function will be called,
-  //   which, in this example, will redirect the user to the home page.
-  app.get('/auth/google/callback', 
-    passport.authenticate('google', { failureRedirect: '/login' }),
-    function(req, res) {
-      res.redirect('/');
-    })
+  passport.serializeUser(function(user, done) {
+    
+  
+    done(null, user.id);
+  });
+  
+  // passport.deserializeUser(function(id, done) {
+  //   User.findById(id, function(err, user) {
+  //     done(err, user);
+  //   });
+  // });
+  app.get('/api/users/me',
+   passport.authenticate('google', { session: false }, { scope: ['email', 'profile' ]}),
+   function(req, res) {
+     res.json({ name: req.user.name, email: req.user.emial });
+   });
 };
